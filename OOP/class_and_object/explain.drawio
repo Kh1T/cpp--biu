@@ -1,0 +1,13 @@
+<mxfile host="65bd71144e">
+    <diagram id="8bEiuERWsdVjy03clBEq" name="Page-1">
+        <mxGraphModel dx="659" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;div style=&quot;color: rgb(218, 218, 218); background-color: rgb(30, 30, 30); font-family: &amp;quot;Droid Sans Mono&amp;quot;, &amp;quot;monospace&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;1. Classes and Objects :&lt;/div&gt;&lt;div&gt;- A class is a blueprint or template &lt;span style=&quot;color: #d8a0df;&quot;&gt;for&lt;/span&gt; creating objects. It defines the properties &lt;span style=&quot;color: #b4b4b4;&quot;&gt;(&lt;/span&gt;data members&lt;span style=&quot;color: #b4b4b4;&quot;&gt;)&lt;/span&gt; and behaviors &lt;span style=&quot;color: #b4b4b4;&quot;&gt;(&lt;/span&gt;member functions&lt;span style=&quot;color: #b4b4b4;&quot;&gt;)&lt;/span&gt; that the objects will have.&lt;/div&gt;&lt;br&gt;&lt;div&gt;- An object is an instance of a class. It represents a real-world entity.&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="110" width="460" height="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

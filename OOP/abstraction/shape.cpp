@@ -8,7 +8,8 @@ using namespace std;
 // Abstract class
 class Shape {
     public:
-        virtual void draw() = 0; // Pure virtual function (must be overridden)
+    // Pure virtual function (must be overridden)
+        virtual void draw() = 0; 
     };
     
     class Circle : public Shape {

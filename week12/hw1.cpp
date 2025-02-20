@@ -35,7 +35,21 @@ float score;
         cout <<id<<setw(15)<<name<<setw(15)<<gender<<setw(15)<<age<<setw(15)<<score<<setw(15)<<contact<<setw(15)<<endl;
     }
 
+    bool login() {
+        string username, password;
+        cout << "Enter username: ";
+        cin >> username;
+        cout << "Enter password: ";
+        cin >> password;
+        return username == "admin" && password == "admin";
+    }
+
 int main() {
+    if (!login()) {
+        cout << "\nInvalid username or password" << endl;
+        cout << "try again\n" << endl;
+        login();
+    }
     do {
         cout << "\nPlease Choose a number : \n1 for input. \n2 for output \n3 for end.\n"<< endl;
         cin >> ops;

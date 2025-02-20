@@ -24,7 +24,6 @@ struct Student
 
 vector<Student> students;
     void input(){
-        int index = 0;
         Student student;
         cout << "\t>>>>>Input Student Information<<<<<\n";
         cout << "\tStudent ID : ";
@@ -51,8 +50,24 @@ vector<Student> students;
         }
         cout << "---------------------------------------------------------------" << endl;
     }
+    bool login() {
+        string username, password;
+        bool satified;
+        cout << "Enter username: ";
+        cin >> username;
+        cout << "Enter password: ";
+        cin >> password;
+        satified = username == "admin" && password == "admin";
+        return satified;
+    }
 
 int main() {
+    if (!login()) {
+        cout << "\nInvalid username or password" << endl;
+        cout << "try again\n" << endl;
+        login();
+    }
+    cout << "Login Successful\n" << endl;
     do {
         cout << "\nPlease Choose a number : \n1 for input. \n2 for output \n3 for end.\n"<< endl;
         cin >> ops;
@@ -62,8 +77,6 @@ int main() {
                 break;
             case 2:
                 output();
-                break;
-            case 3:
                 break;
             default :
                 cout << "Wrong Option !!"<<endl;

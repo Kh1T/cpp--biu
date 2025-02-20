@@ -78,6 +78,9 @@ int main() {
             case 2:
                 output();
                 break;
+            case 3:
+                cout << "End" << endl;
+                break;
             default :
                 cout << "Wrong Option !!"<<endl;
         }

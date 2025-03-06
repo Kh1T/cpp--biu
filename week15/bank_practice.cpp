@@ -66,6 +66,7 @@ int main() {
     
             case 4:
             cout << "Exiting..." << endl;
+            running = false;
             break;
         
         default:

@@ -44,7 +44,7 @@ int main() {
     }
     do
     {
-        cout << "\nEnter 1 to deposit, 2 to withdraw, 3 to check balance 4 to exit: \n Choose an option: \t";
+        cout << "\nEnter 1 to deposit, \n2 to withdraw, \n3 to check balance \n4 to exit: \n Choose an option: \t";
         cin >> opt;
         switch (opt)
         {

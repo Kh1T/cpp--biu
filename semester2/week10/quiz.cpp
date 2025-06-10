@@ -1,3 +1,7 @@
+// ==================== Part 1 ====================
+// This part includes the necessary header and defines the base class 'Restaurant'
+// and the derived class 'Drink'. These classes provide the structure for menu items
+// and their basic input and price calculation methods.
 #include <iostream>
 using namespace std;
 
@@ -25,6 +29,10 @@ public:
     }
 };
 
+// ==================== Part 2 ====================
+// This part defines the 'Breakfast' and 'Dinner' classes, which inherit from 'Restaurant'.
+// 'Breakfast' adds fields for item, price, quantity, and drink inclusion.
+// 'Dinner' inherits from 'Breakfast' and adds a beer inclusion option.
 class Breakfast : public Restaurant {
 public:
     string item;
@@ -47,36 +55,32 @@ public:
     }
 };
 
-// Multilevel Inheritance: Dinner inherits from Breakfast (which inherits from Restaurant)
 class Dinner : public Breakfast {
 public:
     bool include_beer{};
 
     void get() {
-        // Get dinner item details (but skip the drink question from Breakfast)
         cout << "Enter Dinner Item: ";
         cin >> item;
         cout << "Enter Dinner Price: ";
         cin >> price;
         cout << "Enter Item Quantity: ";
         cin >> qty;
-
-        // Only ask about beer for dinner
         char choice;
         cout << "Include beer with dinner? (y/n): ";
         cin >> choice;
         include_beer = (choice == 'y' || choice == 'Y');
-
-        // Set include_drink to false since we're not asking about it
         include_drink = false;
     }
 
     double getPrice() const {
-        // Use parent's price calculation
         return Breakfast::getPrice();
     }
 };
 
+// ==================== Part 3 ====================
+// This part contains the function to display the main menu to the user.
+// It prints the available options for the restaurant system.
 void displayMenu() {
     cout << "\n" << string(50, '=') << endl;
     cout << "|" << string(48, ' ') << "|" << endl;
@@ -92,16 +96,17 @@ void displayMenu() {
     cout << "Enter your choice: ";
 }
 
+// ==================== Part 4 ====================
+// This part starts the main function, declares variables and arrays to store menu items,
+// and displays the welcome message and initial menu.
 int main() {
     int opt;
     int breakfast_count = 0, drink_count = 0, dinner_count = 0;
 
-    // FIXED: Arrays declared OUTSIDE the loop to persist data
     Dinner dinners[100];
     Drink drinks[100];
     Breakfast breakfasts[100];
 
-    // Welcome message
     cout << "\n" << string(60, '*') << endl;
     cout << "*" << string(58, ' ') << "*" << endl;
     cout << "*" << string(18, ' ') << "WELCOME TO IceTea RESTAURANT" << string(9, ' ') << "*" << endl;
@@ -111,6 +116,9 @@ int main() {
     displayMenu();
     cin >> opt;
 
+// ==================== Part 5 ====================
+// This part contains the main menu loop, handling user input for adding items,
+// displaying the invoice, and managing the flow of the program.
     do {
         switch (opt) {
             case 1: {
@@ -236,6 +244,8 @@ int main() {
                 break;
             }
             case 5:
+                // ==================== Part 6 ====================
+                // This part handles the exit option, displaying a thank you message and ending the program.
                 cout << "\n" << string(50, '*') << endl;
                 cout << "*" << string(48, ' ') << "*" << endl;
                 cout << "*" << string(12, ' ') << "Thank you for visiting!" << string(11, ' ') << "*" << endl;
